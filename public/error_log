@@ -1,0 +1,54 @@
+[17-Oct-2024 10:58:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\VarDumper\Dumper\json_encode() in /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php:157
+Stack trace:
+#0 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php(950): Symfony\Component\VarDumper\Dumper\HtmlDumper->getDumpHeader()
+#1 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/CliDumper.php(587): Symfony\Component\VarDumper\Dumper\HtmlDumper->dumpLine(0, true)
+#2 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/CliDumper.php(273): Symfony\Component\VarDumper\Dumper\CliDumper->endValue(Object(Symfony\Component\VarDumper\Cloner\Cursor))
+#3 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php(799): Symfony\Component\VarDumper\Dumper\CliDumper->dumpString(Object(Symfony\Component\VarDumper\Cloner\Cursor), 'Use of undefine...', false, 0)
+#4 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Cloner/Data.php(418): Symfony\Component\VarDumper\Dumper\HtmlDumper->dump in /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php on line 157
+[17-Oct-2024 10:58:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\VarDumper\Dumper\json_encode() in /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php:157
+Stack trace:
+#0 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php(950): Symfony\Component\VarDumper\Dumper\HtmlDumper->getDumpHeader()
+#1 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/CliDumper.php(587): Symfony\Component\VarDumper\Dumper\HtmlDumper->dumpLine(0, true)
+#2 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/CliDumper.php(273): Symfony\Component\VarDumper\Dumper\CliDumper->endValue(Object(Symfony\Component\VarDumper\Cloner\Cursor))
+#3 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php(799): Symfony\Component\VarDumper\Dumper\CliDumper->dumpString(Object(Symfony\Component\VarDumper\Cloner\Cursor), 'Use of undefine...', false, 0)
+#4 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Cloner/Data.php(418): Symfony\Component\VarDumper\Dumper\HtmlDumper->dump in /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php on line 157
+[17-Oct-2024 10:58:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\VarDumper\Dumper\json_encode() in /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php:157
+Stack trace:
+#0 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php(950): Symfony\Component\VarDumper\Dumper\HtmlDumper->getDumpHeader()
+#1 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/CliDumper.php(587): Symfony\Component\VarDumper\Dumper\HtmlDumper->dumpLine(0, true)
+#2 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/CliDumper.php(273): Symfony\Component\VarDumper\Dumper\CliDumper->endValue(Object(Symfony\Component\VarDumper\Cloner\Cursor))
+#3 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php(799): Symfony\Component\VarDumper\Dumper\CliDumper->dumpString(Object(Symfony\Component\VarDumper\Cloner\Cursor), 'Use of undefine...', false, 0)
+#4 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Cloner/Data.php(418): Symfony\Component\VarDumper\Dumper\HtmlDumper->dump in /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php on line 157
+[17-Oct-2024 10:59:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\VarDumper\Dumper\json_encode() in /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php:157
+Stack trace:
+#0 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php(950): Symfony\Component\VarDumper\Dumper\HtmlDumper->getDumpHeader()
+#1 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/CliDumper.php(587): Symfony\Component\VarDumper\Dumper\HtmlDumper->dumpLine(0, true)
+#2 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/CliDumper.php(273): Symfony\Component\VarDumper\Dumper\CliDumper->endValue(Object(Symfony\Component\VarDumper\Cloner\Cursor))
+#3 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php(799): Symfony\Component\VarDumper\Dumper\CliDumper->dumpString(Object(Symfony\Component\VarDumper\Cloner\Cursor), 'Use of undefine...', false, 0)
+#4 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Cloner/Data.php(418): Symfony\Component\VarDumper\Dumper\HtmlDumper->dump in /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php on line 157
+[17-Oct-2024 10:59:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\VarDumper\Dumper\json_encode() in /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php:157
+Stack trace:
+#0 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php(950): Symfony\Component\VarDumper\Dumper\HtmlDumper->getDumpHeader()
+#1 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/CliDumper.php(587): Symfony\Component\VarDumper\Dumper\HtmlDumper->dumpLine(0, true)
+#2 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/CliDumper.php(273): Symfony\Component\VarDumper\Dumper\CliDumper->endValue(Object(Symfony\Component\VarDumper\Cloner\Cursor))
+#3 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php(799): Symfony\Component\VarDumper\Dumper\CliDumper->dumpString(Object(Symfony\Component\VarDumper\Cloner\Cursor), 'Use of undefine...', false, 0)
+#4 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Cloner/Data.php(418): Symfony\Component\VarDumper\Dumper\HtmlDumper->dump in /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php on line 157
+[17-Oct-2024 11:01:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\VarDumper\Dumper\json_encode() in /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php:157
+Stack trace:
+#0 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php(950): Symfony\Component\VarDumper\Dumper\HtmlDumper->getDumpHeader()
+#1 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/CliDumper.php(587): Symfony\Component\VarDumper\Dumper\HtmlDumper->dumpLine(0, true)
+#2 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/CliDumper.php(273): Symfony\Component\VarDumper\Dumper\CliDumper->endValue(Object(Symfony\Component\VarDumper\Cloner\Cursor))
+#3 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php(799): Symfony\Component\VarDumper\Dumper\CliDumper->dumpString(Object(Symfony\Component\VarDumper\Cloner\Cursor), 'Use of undefine...', false, 0)
+#4 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Cloner/Data.php(418): Symfony\Component\VarDumper\Dumper\HtmlDumper->dump in /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php on line 157
+[17-Oct-2024 11:01:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\VarDumper\Dumper\json_encode() in /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php:157
+Stack trace:
+#0 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php(950): Symfony\Component\VarDumper\Dumper\HtmlDumper->getDumpHeader()
+#1 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/CliDumper.php(587): Symfony\Component\VarDumper\Dumper\HtmlDumper->dumpLine(0, true)
+#2 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/CliDumper.php(273): Symfony\Component\VarDumper\Dumper\CliDumper->endValue(Object(Symfony\Component\VarDumper\Cloner\Cursor))
+#3 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php(799): Symfony\Component\VarDumper\Dumper\CliDumper->dumpString(Object(Symfony\Component\VarDumper\Cloner\Cursor), 'Use of undefine...', false, 0)
+#4 /home/alfaofsk/public_html/vendor/symfony/var-dumper/Cloner/Data.php(418): Symfony\Component\VarDumper\Dumper\HtmlDumper->dump in /home/alfaofsk/public_html/vendor/symfony/var-dumper/Dumper/HtmlDumper.php on line 157
+[25-Mar-2025 21:41:46 UTC] PHP Deprecated:  Unparenthesized `a ? b : c ? d : e` is deprecated. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in /home/alfaofsk/public_html/storage/framework/views/80b2ed1f74c86a337699335bbaf7445a9bf0ca29.php on line 6
+[25-Mar-2025 22:13:13 UTC] PHP Deprecated:  Unparenthesized `a ? b : c ? d : e` is deprecated. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in /home/alfaofsk/public_html/storage/framework/views/86711d31da407a02d76352a18280c67a8c4f7ac8.php on line 6
+[26-Mar-2025 23:40:57 UTC] PHP Deprecated:  Unparenthesized `a ? b : c ? d : e` is deprecated. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in /home/alfaofsk/public_html/storage/framework/views/86711d31da407a02d76352a18280c67a8c4f7ac8.php on line 6
+[08-Apr-2025 10:16:34 UTC] PHP Deprecated:  Unparenthesized `a ? b : c ? d : e` is deprecated. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in /home/alfaofsk/public_html/storage/framework/views/41e6f00df65bcc51cc16f44dfb6aefeba2a030ea.php on line 6
+[08-Apr-2025 10:16:34 UTC] PHP Deprecated:  Unparenthesized `a ? b : c ? d : e` is deprecated. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in /home/alfaofsk/public_html/storage/framework/views/41e6f00df65bcc51cc16f44dfb6aefeba2a030ea.php on line 16
