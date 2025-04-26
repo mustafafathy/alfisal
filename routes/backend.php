@@ -14,6 +14,7 @@ Route::group(['middleware' => ['auth:admin'],'as' => 'backend.'], function (Rout
     Route::get('reports/sales', 'ReportController@getSales')->name('reports.sales');
     Route::get('reports/minus', 'ReportController@getMinus')->name('reports.minus');
     Route::get('reports/decors', 'ReportController@getDecorsReport')->name('reports.decors');
+    Route::get('reports/decors/export', 'ReportController@exportDecorsReport')->name('decors.export');
     Route::get('orders/activity-log/{order}', 'OrderController@activityLog')->name('orders.activityLog');
 
     Route::group(['middleware' => 'authorize'], function (Router $router) {

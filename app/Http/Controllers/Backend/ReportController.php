@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Enum\Status;
+use App\Exports\DecorsReportExport;
 use App\Item;
 use App\Order;
 use App\OrderDetail;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ReportController extends BaseController
 {
@@ -52,9 +54,9 @@ class ReportController extends BaseController
         $fromDate = $request->input('fromdate');
 
         $items = Item::with(['detailes' => function ($query) use ($fromDate) {
-            $query->whereHas('orderDetails', function ($subquery) use ($fromDate) {
-                $subquery->whereDate('day', $fromDate);
-            });
+                $query->whereHas('orderDetails', function ($subquery) use ($fromDate) {
+                    $subquery->whereDate('day', $fromDate);
+                });
         }])->get();
 
 
@@ -73,10 +75,42 @@ class ReportController extends BaseController
             }
             $item->remaining = $item->qty - $item->reserved;
         });
+        $items = $items->sortByDesc('reserved')->values();
         ///////////////////////////////////////////////////////////////////////
 
         return view('backend.reports.decors_new', compact('items'));
 
+    }
+
+    public function exportDecorsReport(Request $request)
+    {
+        $fromDate = $request->input('fromdate');
+
+        $items = Item::with([
+            'detailes' => function ($query) use ($fromDate) {
+                $query->whereHas('orderDetails', function ($subquery) use ($fromDate) {
+                    $subquery->whereDate('day', $fromDate);
+                });
+            }
+        ])->get();
+
+        $items->each(function ($item) use ($fromDate) {
+            $item->balance = $item->qty;
+            if ($fromDate) {
+                $item->reserved = OrderDetail::where('item_id', $item->id)
+                    ->whereHas('order', function ($subQuery) use ($fromDate) {
+                        $subQuery->whereDate('day', $fromDate);
+                    })
+                    ->sum('qty');
+            } else {
+                $item->reserved = 0;
+            }
+            $item->remaining = $item->qty - $item->reserved;
+        });
+
+        $items = $items->sortByDesc('reserved')->values();
+
+        return Excel::download(new DecorsReportExport($items), 'decors_report.xlsx');
     }
 
 }
