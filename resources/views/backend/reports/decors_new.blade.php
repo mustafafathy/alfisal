@@ -55,6 +55,10 @@
                                     <button type="submit" class="btn btn-success">
                                         <i class="fa fa-search"></i>&nbsp;بحث
                                     </button>
+                                    <a href="{{ route('backend.decors.export', ['fromdate' => request('fromdate')]) }}" class="btn btn-success" target="_blank">
+                                        تصدير إلى Excel
+                                    </a>
+                                    
                                 </div>
                             </div>
                         </form>
