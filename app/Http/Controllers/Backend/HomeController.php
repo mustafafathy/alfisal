@@ -27,37 +27,40 @@ class HomeController extends BaseController
         }
     }
 
-    public function index(){
+    public function index()
+    {
         $this->closeOrders();
-        //$list = $this->getOrder();
-        $userCalander = auth()->user()->calendar;
-        $status[Status::PENDING] = 0;
-        $status[Status::INPROGRESS] = 0;
-        $status[Status::FINISHED] = 0;
-        $status['all'] = 0;
-        if(!empty($userCalander) && in_array('الطلبات',$userCalander)) {
-            $list = Order::get();
-            $status['all'] = count($list);
-            foreach ($list as $order) {
-                if ($order->status == Status::PENDING)
-                    $status[Status::PENDING]++;
-                elseif ($order->status == Status::INPROGRESS)
-                    $status[Status::INPROGRESS]++;
-                elseif ($order->status == Status::FINISHED)
-                    $status[Status::FINISHED]++;
-            }
+    
+        $status = [
+            Status::PENDING => 0,
+            Status::INPROGRESS => 0,
+            Status::FINISHED => 0,
+            'all' => 0,
+        ];
+    
+        $userCalendar = auth()->user()->calendar;
+    
+        if (!empty($userCalendar) && in_array('الطلبات', $userCalendar)) {
+    
+            $statuses = \DB::table('statuses as s')
+                ->select('s.name', \DB::raw('COUNT(*) as total'))
+                ->join(DB::raw('(SELECT MAX(id) as id FROM statuses GROUP BY model_id) as latest'), 's.id', '=', 'latest.id')
+                ->join('orders as o', 's.model_id', '=', 'o.id')
+                ->groupBy('s.name')
+                ->pluck('total', 's.name');
+            $status[Status::PENDING] = $statuses[Status::PENDING] ?? 0;
+            $status[Status::INPROGRESS] = $statuses[Status::INPROGRESS] ?? 0;
+            $status[Status::FINISHED] = $statuses[Status::FINISHED] ?? 0;
+            $status['all'] = array_sum($statuses->toArray());
         }
-//        $list = $this->getDecorList();
-        $list = $this->ords();
-        $calander = $list['calander'];
-
-
-        $calander = json_encode($calander);
-//        dd ($calander);
+    
+        $calanderData = $this->ords()['calander'];
+    
         \JavaScript::put([
-            'calander' => $calander,
+            'calander' => json_encode($calanderData),
         ]);
-        return view('backend.home',compact('status'));
+    
+        return view('backend.home', compact('status'));
     }
 
 
